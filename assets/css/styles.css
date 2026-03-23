@@ -1,0 +1,106 @@
+/* --- RESET & TIPOGRAFÍA --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Fuente moderna y profesional */
+}
+
+/* --- FONDO PRINCIPAL Y CAPA SUPERIOR --- */
+body {
+    /* Mantenemos tu imagen.jpg pero añadimos una capa oscura para que no sea chillón */
+    background: 
+        linear-gradient(rgba(10, 20, 30, 0.8), rgba(10, 20, 30, 0.9)), 
+        url('../img/imagen.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* --- LAYOUT PRINCIPAL (Sidebar + Contenido) --- */
+.main-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* --- EFECTO DE VIDRIO PROFESIONAL (Glassmorphism) --- */
+.glass {
+    background: rgba(255, 255, 255, 0.05); /* Muy sutil */
+    backdrop-filter: blur(8px); /* Desenfoque elegante */
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* --- BARRA LATERAL (Sidebar) --- */
+.sidebar {
+    width: 280px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    border-radius: 12px;
+}
+
+.sidebar-header h3 {
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.bubble-icon {
+    font-size: 1.3em;
+    vertical-align: middle;
+}
+
+.extra-small {
+    font-size: 0.75rem;
+}
+
+/* --- ÁREA DE CONTENIDO (donde está el canvas) --- */
+.content-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.canvas-container {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* --- ESTILOS DEL CANVAS --- */
+canvas {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: block; /* Quita espacios fantasma */
+}
+
+/* --- INPUTS Y BOTONES PERSONALIZADOS --- */
+.form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    box-shadow: none;
+}
+
+.btn-custom-primary {
+    background-color: #3b82f6; /* Azul suave y moderno */
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-custom-primary:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+}
