@@ -1,40 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Particle Lab POO | Leonardo Gutiérrez</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="./assets/css/styles.css">
+    
     <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
 </head>
+
 <body>
+    
     <div class="main-wrapper">
+        
         <nav class="sidebar glass">
             <div class="sidebar-header">
                 <h3 class="text-white">🚀 Physics Lab</h3>
-                <p class="text-white-50 small">Simulador de Partículas Gravedad y Fricción</p>
+                <p class="text-white-50 small">Simulador de Partículas 2D</p>
             </div>
             
             <div class="sidebar-content mt-4">
+                
                 <div class="mb-3">
                     <label class="form-label text-white-50">Límite de partículas</label>
                     <input type="number" id="numCircles" class="form-control" value="20" min="1" max="100">
                 </div>
+
+                <div class="mb-3">
+                    <label class="form-label text-white-50">Dirección de origen</label>
+                    <select id="direction" class="form-select bg-dark text-white border-secondary">
+                        <option value="top" selected>Desde arriba (Lluvia)</option>
+                        <option value="left">Desde izquierda (Viento)</option>
+                        <option value="right">Desde derecha (Viento opuesto)</option>
+                        <option value="bottom">Desde abajo (Geiser)</option>
+                    </select>
+                </div>
+
                 <div class="mb-3">
                     <label class="form-label text-white-50">Ancho Área (px)</label>
                     <input type="number" id="canvasWidth" class="form-control" value="800">
                 </div>
+
                 <div class="mb-4">
                     <label class="form-label text-white-50">Alto Área (px)</label>
                     <input type="number" id="canvasHeight" class="form-control" value="500">
                 </div>
-                <button class="btn btn-custom-primary w-100" onclick="aplicarCambios()">Reiniciar Cámara</button>
+
+                <button class="btn btn-custom-primary w-100" onclick="aplicarCambios()">Actualizar Simulación</button>
             </div>
             
             <div class="sidebar-footer text-center mt-auto">
-                <p class="text-white-50 mb-0">Leonardo Gutiérrez</p>
+                <p class="text-white-50 mb-0">Desarrollado por:</p>
+                <p class="text-white fw-semibold">Leonardo Gutiérrez</p>
                 <p class="text-muted extra-small">Ingeniería en Sistemas Computacionales</p>
             </div>
         </nav>
@@ -44,7 +67,10 @@
                 <canvas id="canvas"></canvas>
             </div>
         </main>
+
     </div>
+
     <script src="./assets/js/main.js"></script>
 </body>
+
 </html>
